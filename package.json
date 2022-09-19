@@ -1,0 +1,33 @@
+{
+  "name": "@dom111/element-from-selector",
+  "version": "0.1.0",
+  "description": "A simple function to generate an `HTMLElement` from a selector string.",
+  "main": "dist/elementFromSelector.js",
+  "scripts": {
+    "build": "npm run build:prettier:write && npm run build:tsc && npm run build:terser",
+    "build:prettier:check": "prettier -c .",
+    "build:prettier:write": "prettier -w .",
+    "build:terser": "terser dist/elementFromSelector.js -m -c --toplevel --source-map \"content=dist/elementFromSelector.js.map\" -o dist/elementFromSelector.js",
+    "build:tsc": "tsc",
+    "watch": "npm run build && npm run build:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dom111/element-from-selector.git"
+  },
+  "author": "Dom Hastings <dom111@users.noreply.github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dom111/element-from-selector/issues"
+  },
+  "homepage": "https://github.com/dom111/element-from-selector#readme",
+  "dependencies": {
+    "css-what": "^6.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "terser": "^5.15.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.8.3"
+  }
+}
